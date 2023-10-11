@@ -2,10 +2,7 @@
 #include<iostream>
 #include<string.h>
 using namespace std;
-office::office()
-{
-
-}
+office() = default; 
 void office::addoffice()
 {
     cout<<"\nEnter office id: ";
