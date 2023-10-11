@@ -1,12 +1,13 @@
 #include "admin.h"
+#include<memory>
 #include<iostream>
 #include<string.h>
 class office;
 using namespace std;
 admin::admin()
 {
-    obj=new login;
-    off=new office;
+    unique_ptr<login> obj =make_unique<login>();
+    unique_ptr<office> off =make_unique<office>();
 }
 void admin::addadmin()
 {
