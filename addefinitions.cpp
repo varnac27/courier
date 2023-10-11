@@ -27,9 +27,7 @@ void admin::addadmin()
         obj->set();
     cout<<"\nLogin or exit? if login enter 1: ";
     cin>>ch;
-    if(ch==1)
-        result=obj->checklogin();
-    if(result==1)
+    if(ch==1 && obj->checklogin())
     {
         cout<<"\nGO TO OFFICE, if yes enter 1: ";
         cin>>ch;
@@ -51,7 +49,7 @@ void admin::addadmin()
                             break;
                     case 3:off->searchoffice();
                             break;
-                    case 4:off->getoffice();
+                    default:off->getoffice();
                             break;
                 }
                 cout<<"\nWant to continue? if yes enter 1: ";
@@ -61,7 +59,7 @@ void admin::addadmin()
     }
     flag=1;
 
-    if(result==1)
+    if(obj->checklogin())
     {
         cout<<"\nGO TO COURIER DETAILS if yes enter 1: ";
         cin>>ch;
