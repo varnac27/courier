@@ -44,7 +44,9 @@ void courier::updatecourier()
 }
 void courier::courierstatus()
 {
-    int id,result,d;
+    int id;
+    int result;
+    int d;
     cout<<"\nEnter shipment id to check if its present:";
     cin>>id;
     result=ship_obj->searchshipment(id);
