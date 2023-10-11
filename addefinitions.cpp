@@ -6,7 +6,7 @@ class office;
 using namespace std;
 admin::admin()
 {
-    unique_ptr<login> loginobj =make_unique<login>();
+    auto <login> loginobj =make_unique<login>();
     auto <office> officeoff =make_unique<office>();
 }
 void admin::addadmin()
@@ -22,7 +22,7 @@ void admin::addadmin()
     cin>>ad_mobile;
     cout<<"\nEnter email:";
     cin>>ad_email;
-    ad_status=1;// admin is set up
+    ad_status=true;// admin is set up
     cout<<"\nSet up login? if yes enter 1:";
     cin>>ch;
     if(ch==1)
@@ -80,6 +80,8 @@ void admin::addadmin()
                             break;
                     case 2:courierstatus();
                             break;
+                    default: cout<<"give choice as 1 or 2";
+                                break;
                 }
                 cout<<"\nWant to continue? if yes enter 1 :";
                 cin>>flag;
@@ -95,7 +97,7 @@ void admin::updateadmin()
     cin>>ad_id;
     cout<<"\nNew email:";
     cin>>ad_email;
-    ad_status=1;
+    ad_status=true;
     obj->admin_id=ad_id;
     cout<<"\nAdmin id also updated in LOGIN";
 }
