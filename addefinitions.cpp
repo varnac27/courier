@@ -11,7 +11,9 @@ admin::admin()
 }
 void admin::addadmin()
 {
-    int ch,choice,flag=1;
+    int ch;
+    int choice;
+    int flag=1;
     cout<<"\nEnter admin id:";
     cin>>ad_id;
     cout<<"\nEnter admin name:";
