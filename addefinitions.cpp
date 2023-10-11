@@ -7,7 +7,7 @@ using namespace std;
 admin::admin()
 {
     unique_ptr<login> loginobj =make_unique<login>();
-    unique_ptr<office> officeoff =make_unique<office>();
+    auto <office> officeoff =make_unique<office>();
 }
 void admin::addadmin()
 {
