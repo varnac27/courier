@@ -6,12 +6,12 @@ class office;
 using namespace std;
 admin::admin()
 {
-    unique_ptr<login> obj =make_unique<login>();
-    unique_ptr<office> off =make_unique<office>();
+    unique_ptr<login> loginobj =make_unique<login>();
+    unique_ptr<office> officeoff =make_unique<office>();
 }
 void admin::addadmin()
 {
-    int ch,choice,result,flag=1;
+    int ch,choice,flag=1;
     cout<<"\nEnter admin id:";
     cin>>ad_id;
     cout<<"\nEnter admin name:";
@@ -24,10 +24,10 @@ void admin::addadmin()
     cout<<"\nSet up login? if yes enter 1:";
     cin>>ch;
     if(ch==1)
-        obj->set();
+        loginobj->set();
     cout<<"\nLogin or exit? if login enter 1: ";
     cin>>ch;
-    if(ch==1 && obj->checklogin())
+    if(ch==1 && loginobj->checklogin())
     {
         cout<<"\nGO TO OFFICE, if yes enter 1: ";
         cin>>ch;
@@ -43,13 +43,13 @@ void admin::addadmin()
                 cin>>choice;
                 switch(choice)
                 {
-                    case 1: off->addoffice();
+                    case 1: officeoff->addoffice();
                             break;
-                    case 2:off->updateoffice();
+                    case 2:officeoff->updateoffice();
                             break;
-                    case 3:off->searchoffice();
+                    case 3:officeoff->searchoffice();
                             break;
-                    default:off->getoffice();
+                    default:officeoff->getoffice();
                             break;
                 }
                 cout<<"\nWant to continue? if yes enter 1: ";
@@ -59,7 +59,7 @@ void admin::addadmin()
     }
     flag=1;
 
-    if(obj->checklogin())
+    if(loginobj->checklogin())
     {
         cout<<"\nGO TO COURIER DETAILS if yes enter 1: ";
         cin>>ch;
