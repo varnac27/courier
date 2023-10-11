@@ -4,8 +4,7 @@
 using namespace std;
 courier::courier()
 {
-    ship_obj=new shipment;
-
+    std::unique_ptr<shipment> ship_obj = std::make_unique<shipment>();
 }
 void courier::addcourier()
 {
