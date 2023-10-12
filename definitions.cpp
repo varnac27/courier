@@ -28,7 +28,7 @@ void login::changepassword()
     cin>>last_pw;
     cout<<"\nEnter password (min 8 chars):";
     cin>>new_pw2;
-    while(1)
+    while(true)
     {
         if(strlen(new_pw2)>=8)
         {
@@ -77,8 +77,10 @@ int login::checklogin()
      if(ch==0)
          forgotpassword();
      else
+     {   
          cout<<"\nEnter password:";
          cin>>pw;
+     }
 
      if((strcmp(name,username)==0)&&(strcmp(pw,password)==0))
      {
@@ -86,8 +88,10 @@ int login::checklogin()
         return 1;
      }
     else
+     {    
         cout<<"\nLogin failed";
         return 0;
+     }
 }
 int login::getadmin_id()
 {
