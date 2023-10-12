@@ -4,8 +4,8 @@ class office
 {
     private:
         int off_id;
-        char off_name[30];
-        char off_address[30];
+        string off_name;
+        string off_address;
         int off_phone;
     public:
         office();
