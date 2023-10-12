@@ -17,4 +17,5 @@ class admin:public courier
         void addadmin();
         void updateadmin();
         void searchadmin();
+        void handle(office *off_object);
 };
