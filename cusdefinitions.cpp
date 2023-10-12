@@ -39,7 +39,7 @@ void customer::updatecustomer()
 }
 void customer::searchcustomer()
 {
-    int id,i;
+    int id;
     cout<<"\n enter customer id to be searched:";
     cin>>id;
     if(id==cus_id)
