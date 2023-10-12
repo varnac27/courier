@@ -1,13 +1,14 @@
 #include "login.h"
 #include "courier.h"
 #include "office.h"
+#include<string>
 class admin:public courier
 {
     private:
         int ad_id;
-        char ad_name[30];
+        string ad_name;
         int ad_mobile;
-        char ad_email[70];
+        string ad_email;
         bool ad_status;
         login *obj;
         office *off;
