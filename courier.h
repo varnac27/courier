@@ -9,10 +9,10 @@ class courier:public office
         int c_id;
         int office_id;
         int shipment_id;
-        char title[30];
+        string title;
+        shipment *ship_obj;
     public:
         courier();
-        shipment *ship_obj;
         void addcourier();
         void getcourier(customer );
         void updatecourier( );
