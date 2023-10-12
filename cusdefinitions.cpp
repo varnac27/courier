@@ -1,7 +1,7 @@
 #include "customer.h"
 #include<iostream>
 using namespace std;
-int customer::getid()
+int customer::getid const()
 {
     return cus_id;
 }
@@ -19,7 +19,7 @@ void customer::addcustomer()
     cin>>cus_email;
     cout<<"\nCustomer details added.Now customer wants to enter courier datas";
 }
-void customer::getcustomer()
+void customer::getcustomer const()
 {
     cout<<"\nCustomer id      :"<<cus_id;
     cout<<"\nCustomer name    :"<<cus_name;
@@ -37,7 +37,7 @@ void customer::updatecustomer()
     cin>>cus_address;
 
 }
-void customer::searchcustomer()
+void customer::searchcustomer const()
 {
     int id;
     cout<<"\n enter customer id to be searched:";
