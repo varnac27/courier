@@ -13,7 +13,7 @@ void shipment::addshipment()
     cin>>date;
 
 }
-void shipment::getshipment()
+void shipment::getshipment const()
 {
     cout<<"\nShipment id         : "<<ship_id;
     cout<<"\nFrom city           :"<<from_city;
@@ -35,7 +35,7 @@ void shipment::updateshipment()
     cin>>date;
 
 }
-int shipment::getdate()
+int shipment::getdate const()
 {
     return date;
 
@@ -55,7 +55,7 @@ void shipment::setshipmentid(int id)
 {
    ship_id=id;
 }
-int shipment::getid()
+int shipment::getid const()
 {
     return ship_id;
 }
