@@ -9,6 +9,26 @@ admin::admin()
     auto <login> loginobj =make_unique<login>();
     auto <office> officeoff =make_unique<office>();
 }
+void check()
+{
+     while(flag==1)
+            {
+                cout<<"\n Enter choice";
+                cin>>choice;
+                switch(choice)
+                {
+                    case 1:updatecourier();
+                            break;
+                    case 2:courierstatus();
+                            break;
+                    default: cout<<"give choice as 1 or 2";
+                                break;
+                }
+                cout<<"\nWant to continue? if yes enter 1 :";
+                cin>>flag;
+            }
+}
+
 void admin::handle(office * off_object)
 {
     while(flag==1)
@@ -73,23 +93,7 @@ void admin::addadmin()
         {
             cout<<"\n1.Update courier";
             cout<<"\n2.courier status";
-
-            while(flag==1)
-            {
-                cout<<"\n Enter choice";
-                cin>>choice;
-                switch(choice)
-                {
-                    case 1:updatecourier();
-                            break;
-                    case 2:courierstatus();
-                            break;
-                    default: cout<<"give choice as 1 or 2";
-                                break;
-                }
-                cout<<"\nWant to continue? if yes enter 1 :";
-                cin>>flag;
-            }
+            check();
         }
     }
 
