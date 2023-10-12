@@ -11,7 +11,9 @@ int main()
     fout.open("Courier Management system.txt");
     if(fin.fail())
         cout<<"\nCouldnt open file.";
-    int ch,flag=1,flag1=1;
+    int ch;
+    int flag=1;
+    int flag1=1;
     customer cus_obj,customer_obj;
     courier courier_obj;
     cout<<"\n1.Add customer";
