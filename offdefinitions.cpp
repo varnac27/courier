@@ -24,7 +24,7 @@ void office::updateoffice()
     cout<<"\nEnter phone:";
     cin>>off_phone;
 }
-void office::searchoffice()
+void office::searchoffice const()
 {
     int o_id;
     cout<<"\nEnter office is to be searched:";
@@ -34,7 +34,7 @@ void office::searchoffice()
     else
         cout<<"\nNot found";
 }
-void office::getoffice()
+void office::getoffice const()
 {
     cout<<"\nOffice id  :"<<off_id;
     cout<<"\nName       :"<<off_name;
