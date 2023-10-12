@@ -1,12 +1,12 @@
-
+#include<string>
 class customer
 {
     private:
         int cus_id;
-        char cus_name[30];
+        string cus_name;
         int cus_mobile;
-        char cus_address[30];
-        char cus_email[30];
+        string cus_address;
+        string cus_email;
 
     public:
 
