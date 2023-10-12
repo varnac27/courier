@@ -4,8 +4,8 @@ class shipment
 {
     private:
         int ship_id;
-        char from_city[30];
-        char to_city[30];
+        string from_city;
+        string to_city;
         float weight;
         int date;
     public:
