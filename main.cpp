@@ -3,38 +3,17 @@
 #include "admin.h"
 #include "customer.h"
 using namespace std;
-int main()
+customer cus_obj;
+customer customer_obj;
+courier courier_obj;
+void handle(ofstream fin,ifstream fout)
 {
-    ofstream fin;
-    ifstream fout;
     fin.open("Courier Management system.txt",ios::app);
     fout.open("Courier Management system.txt");
     if(fin.fail())
         cout<<"\nCouldnt open file.";
-    int ch;
-    int flag=1;
-    int flag1=1;
-    customer cus_obj;
-    customer customer_obj;
-    courier courier_obj;
-    cout<<"\n1.Add customer";
-    cout<<"\n2.Update customer";
-    cout<<"\n3.Search customer";
-    cout<<"\n4.Get customer";
-    while(flag==1)
+    while(flag1==1)
     {
-        cout<<"\nEnter(main menu of customer) your choice";
-        cin>>ch;
-        switch(ch)
-        {
-            case 1: customer_obj.addcustomer();
-                    fin.write((char*)&customer_obj,sizeof(customer_obj));
-                    cout<<"\n1.Add courier";
-                    cout<<"\n2.Update courier";
-                    cout<<"\n3.Courier status";
-                    cout<<"\n4.Get courier";
-                    while(flag1==1)
-                    {
                     cout<<"\nEnter your choice(office menu):";
                     cin>>ch;
                     switch(ch)
@@ -57,7 +36,38 @@ int main()
                     }
                     cout<<"\nWant to continue? if yes enter 1";
                     cin>>flag1;
-                    }
+    }
+    
+}
+
+int main()
+{
+    ofstream fin;
+    ifstream fout;
+    fin.open("Courier Management system.txt",ios::app);
+    fout.open("Courier Management system.txt");
+    if(fin.fail())
+        cout<<"\nCouldnt open file.";
+    int ch;
+    int flag=1;
+    int flag1=1;
+    cout<<"\n1.Add customer";
+    cout<<"\n2.Update customer";
+    cout<<"\n3.Search customer";
+    cout<<"\n4.Get customer";
+    while(flag==1)
+    {
+        cout<<"\nEnter(main menu of customer) your choice";
+        cin>>ch;
+        switch(ch)
+        {
+            case 1: customer_obj.addcustomer();
+                    fin.write((char*)&customer_obj,sizeof(customer_obj));
+                    cout<<"\n1.Add courier";
+                    cout<<"\n2.Update courier";
+                    cout<<"\n3.Courier status";
+                    cout<<"\n4.Get courier";
+                    handle(fin,fout);
                     break;
             case 2:customer_obj.updatecustomer();
                     fin.write((char*)&customer_obj,sizeof(customer_obj));
