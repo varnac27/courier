@@ -4,7 +4,7 @@
 using namespace std;
 courier::courier()
 {
-    std::unique_ptr<shipment> ship_obj = std::make_unique<shipment>();
+    std::unique_ptr<shipment> ship_obj2 = std::make_unique<shipment>();
 }
 void courier::addcourier()
 {
@@ -49,17 +49,17 @@ void courier::courierstatus()
     int d;
     cout<<"\nEnter shipment id to check if its present:";
     cin>>id;
-    result=ship_obj->searchshipment(id);
+    result=ship_obj2->searchshipment(id);
     if(result==1)
     {
         cout<<"\nShipment processed";
         cout<<"\nEnter present date:";
         cin>>d;
-        if(d>ship_obj->getdate())
+        if(d>ship_obj2->getdate())
         {
             cout<<"\nShipment delivered";
         }
-        else if(d<ship_obj->getdate())
+        else if(d<ship_obj2->getdate())
         {
             cout<<"\nShipment on process";
         }
