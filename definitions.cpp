@@ -5,8 +5,8 @@
 using namespace std;
 void login::changepassword()
 {
-    char new_pw[30];
-    char new_pw1[30];
+    string new_pw;
+    string new_pw1;
     cout<<"\nEnter new password:";
     cin>>new_pw;
     cout<<"\n Enter again:";
@@ -22,8 +22,8 @@ void login::changepassword()
 }
 [[noreturn]] void login::forgotpassword()
 {
-    char last_pw[30];
-    char new_pw2[30];
+    string last_pw;
+    string new_pw2;
     cout<<"\nEnter the last password u remember:";
     cin>>last_pw;
     cout<<"\nEnter password (min 8 chars):";
@@ -65,8 +65,8 @@ void login::set()
 }
 int login::checklogin()
 {
-     char name[30];
-    char pw[30];
+    string name;
+    string pw;
      int ch;
      cout<<"\n TO LOGIN ";
      cout<<"\nUsername:";
