@@ -9,6 +9,27 @@ admin::admin()
     auto <login> loginobj =make_unique<login>();
     auto <office> officeoff =make_unique<office>();
 }
+void admin::handle(office * off_object)
+{
+    while(flag==1)
+            {
+                cout<<"\nEnter your choice:";
+                cin>>choice;
+                switch(choice)
+                {
+                    case 1: off_object->addoffice();
+                            break;
+                    case 2:off_object->updateoffice();
+                            break;
+                    case 3:off_object->searchoffice();
+                            break;
+                    default:off_object->getoffice();
+                            break;
+                }
+                cout<<"\nWant to continue? if yes enter 1: ";
+                cin>>flag;
+            }
+}
 void admin::addadmin()
 {
     int ch;
@@ -39,24 +60,7 @@ void admin::addadmin()
             cout<<"\n2.Update office";
             cout<<"\n3.search office";
             cout<<"\n4.get office";
-            while(flag==1)
-            {
-                cout<<"\nEnter your choice:";
-                cin>>choice;
-                switch(choice)
-                {
-                    case 1: officeoff->addoffice();
-                            break;
-                    case 2:officeoff->updateoffice();
-                            break;
-                    case 3:officeoff->searchoffice();
-                            break;
-                    default:officeoff->getoffice();
-                            break;
-                }
-                cout<<"\nWant to continue? if yes enter 1: ";
-                cin>>flag;
-            }
+            handle(officeoff);
         }
     }
     flag=1;
