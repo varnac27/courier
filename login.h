@@ -2,11 +2,11 @@ class login
 {
    private:
         int id;
-        char username[30];
-        char password[30];
+        string username;
+        string password;
         bool status;
-   public:
         int admin_id;
+   public:
         void set();
         int getadmin_id();
         int checklogin();
